@@ -2,7 +2,7 @@
 
 Requirements:
 - Javascript (Node.js)
-- Node 26 LTS
+- Node 24 - as AWS Lambda provides Node.js 24 runtime
 - AWS Account
 - AWS Lambda
 - Neon - Serverless Framework / Postgres Database
