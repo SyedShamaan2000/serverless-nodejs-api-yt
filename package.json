@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "dependencies": {
+    "@neondatabase/serverless": "^1.1.0",
+    "drizzle-orm": "^0.45.2",
     "express": "^4.19.2",
     "serverless-http": "^3.2.0"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.18.1"
   }
 }
