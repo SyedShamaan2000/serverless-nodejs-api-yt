@@ -4,14 +4,14 @@ frameworkVersion: "4"
 
 provider:
   name: aws
-  runtime: nodejs24.x  # 👈 Update this from nodejs20.x to nodejs24.x
+  runtime: nodejs24.x # 👈 Update this from nodejs20.x to nodejs24.x
   # Uncomment to easily set up a custom domain. Read the docs for more details:
   # https://www.serverless.com/framework/docs/providers/aws/guide/domains
   # domain: api.example.com
 
 functions:
   api:
-    handler: handler.handler
+    handler: src/index.handler
     events:
       - httpApi: "*"
 
