@@ -13,6 +13,8 @@ Installation:
 - npm install -g serverless
 - npx degit serverless/examples/aws-node-express-api . -f  #This will force install serverless, NOTE: ReadME.md file will be replaced!
 
+A better way is to run git init later after setting up serverless
+
 <!--
 title: 'Serverless Framework Node Express API on AWS'
 description: 'This template demonstrates how to develop and deploy a simple Node Express API running on AWS Lambda using the Serverless Framework.'
