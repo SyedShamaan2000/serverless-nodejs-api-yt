@@ -20,8 +20,9 @@ app.use((req, res, next) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("Server is running on port http://localhost:3000");
-});
+// server-full app
+// app.listen(3000, () => {
+//   console.log("Server is running on port http://localhost:3000");
+// });
 
 exports.handler = serverless(app);

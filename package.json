@@ -2,6 +2,9 @@
   "name": "aws-node-express-api",
   "version": "1.0.0",
   "description": "",
+  "scripts": {
+    "dev": "serverless offline --stage dev"
+  },
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",
     "drizzle-orm": "^0.45.2",
@@ -9,6 +12,7 @@
     "serverless-http": "^3.2.0"
   },
   "devDependencies": {
-    "drizzle-kit": "^0.18.1"
+    "drizzle-kit": "^0.18.1",
+    "serverless-offline": "^14.7.4"
   }
 }

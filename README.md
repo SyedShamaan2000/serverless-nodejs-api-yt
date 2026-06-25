@@ -11,8 +11,10 @@ Requirements:
 
 Installation:
 - npm install -g serverless
-- npx degit serverless/examples/aws-node-express-api . -f  #This will force install serverless, NOTE: ReadME.md file will be replaced!
+- npx degit serverless/examples/aws-node-express-api . -f  # This will force install serverless, NOTE: ReadME.md file will be replaced!
 - npm install -g neonctl
+- serverless plugin install -n serverless-offline
+- serverless offline # Later add to package.json in scripts
 
 A better way is to run git init later after setting up serverless
 
