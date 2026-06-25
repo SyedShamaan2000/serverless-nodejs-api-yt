@@ -8,6 +8,8 @@ provider:
   # Uncomment to easily set up a custom domain. Read the docs for more details:
   # https://www.serverless.com/framework/docs/providers/aws/guide/domains
   # domain: api.example.com
+  environment:
+    DATABASE_URL: ${env:DATABASE_URL, "fallback-value-if-not-set"}
 
 functions:
   api:
