@@ -1,6 +1,7 @@
 # "org" ensures this Service is used with the correct Serverless Framework Access Key.
 org: syed2000
-service: aws-node-express-api
+# Lambda function name must be unique across all AWS accounts in the same region. The default is to use the service name, but you can override it here.
+service: serverless-nodejs-api-yt
 
 custom:
   env:

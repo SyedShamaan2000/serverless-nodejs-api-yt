@@ -9,6 +9,7 @@ const ssm = new AWS.SSM();
 const app = express();
 
 const STAGE = process.env.STAGE || "prod";
+// SSM parameter name for the database URL
 const DATABASE_URL_SSM_PARAM = `/serverless-nodejs-api-yt/${STAGE}/database-url`;
 
 async function dbClient() {

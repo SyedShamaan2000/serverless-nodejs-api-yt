@@ -8,6 +8,7 @@ Requirements:
 - Neon - Serverless Framework / Postgres Database
 - GitHub Actions
 - AWS IAM Role with permissions to deploy Lambda functions and manage API Gateway
+- Create AWS Lambda function - can also paste the .zip uri from the s3 bucket
 
 Installation:
 - npm install -g serverless
