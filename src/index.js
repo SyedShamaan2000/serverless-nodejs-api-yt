@@ -10,14 +10,9 @@ async function dbClient() {
 
 app.get("/", async (req, res, next) => {
   const db = await dbClient();
-  const query = "SELECT NOW() AS now";
-  db.query(query)
-    .then((result) => {
-      console.log("Database query result:", result);
-    })
-    .catch((error) => {
-      console.error("Database query error:", error);
-    });
+  const [result] = await db`SELECT NOW()`;
+  console.log("Database query result:", result?.now);
+
   return res.status(200).json({
     message: "Hello from root!",
     databaseUrl: process.env.DATABASE_URL || "No database URL set",
