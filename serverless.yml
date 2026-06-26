@@ -15,8 +15,20 @@ provider:
   # Uncomment to easily set up a custom domain. Read the docs for more details:
   # https://www.serverless.com/framework/docs/providers/aws/guide/domains
   # domain: api.example.com
-  environment:
-    DATABASE_URL: ${env:DATABASE_URL, "fallback-value-if-not-set"}
+  iam:
+    role:
+      # In the policy.json file, we set up like /serverless-*/ to allow access to all functions in this service. 
+      # If you want to restrict it to a specific function, you can change the wildcard to the function name. 
+      name: serverless-my-ssm-role
+      statements:
+        - Effect: "Allow"
+          Resource: "*"
+          Action:
+            - "ssm:GetParameter"
+            - "ssm:GetParameters"
+            - "ssm:GetParametersByPath"
+            - "ssm:DescribeParameters"
+            - "ssm:GetParameterHistory"
 
 functions:
   api:

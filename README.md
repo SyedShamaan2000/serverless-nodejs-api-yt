@@ -18,6 +18,7 @@ Installation:
 - export AWS_ACCESS_KEY_ID="YOUR_ACCESS_KEY_ID"
 - export AWS_SECRET_ACCESS_KEY="YOUR_SECRET_ACCESS_KEY"
 - replace AWS_ID with AWS AccountID in reference/policy.json - maybe a 14 digits number
+- you can paste the policy.json in the AWS create policy
 - In IAMUser add AdministratorAccess policy to give deployment acccess
 
 A better way is to run git init later after setting up serverless
