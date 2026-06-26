@@ -4,12 +4,12 @@ import { neon } from "@neondatabase/serverless";
 
 const app = express();
 
-function dbClient() {
+async function dbClient() {
   return neon(process.env.DATABASE_URL);
 }
 
-app.get("/", (req, res, next) => {
-  const db = dbClient();
+app.get("/", async (req, res, next) => {
+  const db = await dbClient();
   const query = "SELECT NOW() AS now";
   db.query(query)
     .then((result) => {
