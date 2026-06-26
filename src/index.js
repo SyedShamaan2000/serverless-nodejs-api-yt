@@ -1,10 +1,13 @@
 import serverless from "serverless-http";
 import express from "express";
-import { neon } from "@neondatabase/serverless";
+import { neon, neonConfig } from "@neondatabase/serverless";
 
 const app = express();
 
 async function dbClient() {
+  // for http connections
+  // non-pooling
+  neonConfig.fetchConnectionCache = true;
   return neon(process.env.DATABASE_URL);
 }
 
