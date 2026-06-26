@@ -1,8 +1,23 @@
-const serverless = require("serverless-http");
-const express = require("express");
+import serverless from "serverless-http";
+import express from "express";
+import { neon } from "@neondatabase/serverless";
+
 const app = express();
 
+function dbClient() {
+  return neon(process.env.DATABASE_URL);
+}
+
 app.get("/", (req, res, next) => {
+  const db = dbClient();
+  const query = "SELECT NOW() AS now";
+  db.query(query)
+    .then((result) => {
+      console.log("Database query result:", result);
+    })
+    .catch((error) => {
+      console.error("Database query error:", error);
+    });
   return res.status(200).json({
     message: "Hello from root!",
     databaseUrl: process.env.DATABASE_URL || "No database URL set",
@@ -26,4 +41,5 @@ app.use((req, res, next) => {
 //   console.log("Server is running on port http://localhost:3000");
 // });
 
-exports.handler = serverless(app);
+// Use ES module export syntax instead of exports.handler
+export const handler = serverless(app);

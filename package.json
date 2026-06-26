@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "serverless offline --stage dev"
   },
+  "type": "module",
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",
     "drizzle-orm": "^0.45.2",
